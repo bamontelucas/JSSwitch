@@ -1,0 +1,51 @@
+.switch{
+	font-family: sans-serif;
+	position: relative;
+	display: inline-block;
+	height: 2em;
+	width: 4em;
+	border: 1px solid #999;
+	background-color: #CCC;
+	border-radius: 2em;
+	cursor: pointer;
+}
+.switch-option{
+	height: 2em;
+	width: 2em;
+	border-radius: 2em;
+	border: 1px solid;
+	box-sizing: border-box;
+	color: white;
+	transition: all .25s;
+}
+.switch.off .switch-option{
+	background-color: rgb(192, 16, 16);
+	border-color: rgb(128, 0, 0);
+	position: relative;
+	left: -1px;
+}
+.switch.on .switch-option{
+	background-color: rgb(16, 192, 16);
+	border-color: rgb(0, 128, 0);
+	position: relative;
+	left: calc(50% + 1px);
+}
+.switch:before{
+	width: 2em;
+	height: 2em;
+	display: block;
+	position: absolute;
+	top: 0.6em;
+	font-size: 0.8em;
+	transition: all .2s;
+}
+.switch.on:before{
+	left: 0.2em;
+	content: "ON";
+	color: rgb(0, 128, 0);
+}
+.switch.off:before{
+	right: 0.2em;
+	content: "OFF";
+	color: rgb(128, 0, 0);
+}
